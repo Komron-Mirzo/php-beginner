@@ -141,6 +141,14 @@ if ($get['delete_id']) {
 
         ?>
 
+    <!-- 
+    1) Display All flashCards in separate php file with button it opens this page;
+    2) Add filter for flashcard by category;
+    3) For Add/Delete Table:
+        - Change the simple table into Form->table version;
+        - Add Edit inline rows functionality;
+        - Add Table filter by category;
+    -->
 
     </table>
 
@@ -149,3 +157,6 @@ if ($get['delete_id']) {
 </body>
 
 </html>
+
+
+
