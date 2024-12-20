@@ -1,27 +1,37 @@
 [
     {
-        "word": "Hello",
+        "word": "Hi there",
         "translation": "Salom",
         "category": "Greetings & Introductions"
     },
     {
-        "word": "sdgdsag",
-        "translation": "sdgsdg",
+        "word": "bla bla",
+        "translation": "blaaa",
         "category": "Common Verbs"
     },
     {
-        "word": "gwerg",
-        "translation": "wegwegweg",
+        "word": "short",
+        "translation": "kalta",
+        "category": "Adjectives"
+    },
+    {
+        "word": "blue",
+        "translation": "ko'k",
+        "category": "Adjectives"
+    },
+    {
+        "word": "one",
+        "translation": "bir",
+        "category": "Numbers"
+    },
+    {
+        "word": "Hey",
+        "translation": "Hoy",
+        "category": "Greetings & Introductions"
+    },
+    {
+        "word": "Apple",
+        "translation": "olma",
         "category": "Common Verbs"
-    },
-    {
-        "word": "gswgws",
-        "translation": "dgsdgsdgsdg",
-        "category": "Weather"
-    },
-    {
-        "word": "dsvsvsv",
-        "translation": "sdvsdvsdv",
-        "category": "Days of the Week"
     }
 ]
