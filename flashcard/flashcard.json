@@ -33,5 +33,10 @@
         "word": "Apple",
         "translation": "olma",
         "category": "Common Verbs"
+    },
+    {
+        "word": "new edit",
+        "translation": "new edit 2",
+        "category": "Family"
     }
 ]

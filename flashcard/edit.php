@@ -44,6 +44,7 @@ if ($get['word-edit'] && $get['translation-edit'] && $get['category-edit'] && $g
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="flashcard.css">
     <title>Edit page</title>
 </head>
 <body>
