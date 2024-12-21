@@ -49,8 +49,11 @@ foreach ($categories as $category) {
         <?php
 
             foreach($categories as $index => $category) {
+
+                $checked = $getGrid['category-grid'] && $_GET['category-grid'] === $category ? "checked" : '';
+
                 echo '<div class="ka-grid-category-item">';
-                echo '<input onchange="this.form.submit()" type="radio" name="category-grid" class="ka-grid-radio"' . 'value="'. $category . '" id="ka-grid-label-'. $index . '">';
+                echo '<input ' . $checked . ' onchange="this.form.submit()" type="radio" name="category-grid" class="ka-grid-radio"' . 'value="'. $category . '" id="ka-grid-label-'. $index . '">';
                 echo '<label for="ka-grid-label-' . $index .  '" class="ka-grid-label">' . $category . '</label>';
                 echo '</div>';
             }
