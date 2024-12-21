@@ -5,16 +5,6 @@
         "category": "Greetings & Introductions"
     },
     {
-        "word": "Goodbye",
-        "translation": "Xayr",
-        "category": "Greetings & Introductions"
-    },
-    {
-        "word": "How are you?",
-        "translation": "Qalaysiz?",
-        "category": "Greetings & Introductions"
-    },
-    {
         "word": "Nice to meet you",
         "translation": "Siz bilan tanishganimdan xursandman",
         "category": "Greetings & Introductions"
@@ -40,11 +30,6 @@
         "category": "Numbers"
     },
     {
-        "word": "Four",
-        "translation": "To‘rt",
-        "category": "Numbers"
-    },
-    {
         "word": "Five",
         "translation": "Besh",
         "category": "Numbers"
@@ -56,7 +41,7 @@
     },
     {
         "word": "Blue",
-        "translation": "Ko‘k",
+        "translation": "Ko\u2018k",
         "category": "Colors"
     },
     {
@@ -161,12 +146,12 @@
     },
     {
         "word": "Brother",
-        "translation": "Aka/Uka",
+        "translation": "Aka\/Uka",
         "category": "Family"
     },
     {
         "word": "Sister",
-        "translation": "Opa/Singil",
+        "translation": "Opa\/Singil",
         "category": "Family"
     },
     {
@@ -186,17 +171,17 @@
     },
     {
         "word": "Uncle",
-        "translation": "Amaki/to‘ra",
+        "translation": "Amaki\/to\u2018ra",
         "category": "Family"
     },
     {
         "word": "Aunt",
-        "translation": "Xola/amaki",
+        "translation": "Xola\/amaki",
         "category": "Family"
     },
     {
         "word": "Cousin",
-        "translation": "Amakivachcha/xolavachcha",
+        "translation": "Amakivachcha\/xolavachcha",
         "category": "Family"
     },
     {
@@ -256,12 +241,12 @@
     },
     {
         "word": "Read",
-        "translation": "O‘qimoq",
+        "translation": "O\u2018qimoq",
         "category": "Common Verbs"
     },
     {
         "word": "Sing",
-        "translation": "Qo‘shiq aytmoq",
+        "translation": "Qo\u2018shiq aytmoq",
         "category": "Common Verbs"
     },
     {
@@ -381,7 +366,7 @@
     },
     {
         "word": "Rainy",
-        "translation": "Yomg‘irli",
+        "translation": "Yomg\u2018irli",
         "category": "Weather"
     },
     {
@@ -396,7 +381,7 @@
     },
     {
         "word": "Stormy",
-        "translation": "Bo‘ronli",
+        "translation": "Bo\u2018ronli",
         "category": "Weather"
     },
     {
@@ -456,7 +441,7 @@
     },
     {
         "word": "Shop",
-        "translation": "Do‘kon",
+        "translation": "Do\u2018kon",
         "category": "Places"
     },
     {
@@ -466,7 +451,7 @@
     },
     {
         "word": "Airport",
-        "translation": "Havo yo‘li",
+        "translation": "Havo yo\u2018li",
         "category": "Places"
     },
     {
@@ -506,7 +491,7 @@
     },
     {
         "word": "Ticket counter",
-        "translation": "Chiptalar bo‘limi",
+        "translation": "Chiptalar bo\u2018limi",
         "category": "Travel Vocabulary"
     },
     {
@@ -551,7 +536,7 @@
     },
     {
         "word": "Store",
-        "translation": "Do‘kon",
+        "translation": "Do\u2018kon",
         "category": "Shopping"
     },
     {
