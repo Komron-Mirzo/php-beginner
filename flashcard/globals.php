@@ -56,4 +56,41 @@ $categories = [
 ];
 
 
+
+
+
+if ($get['delete_id'] && !$get['edit_id']) {
+    $getIndex = $get['delete_id'];
+
+    unset($array[$getIndex]);
+
+    $array = array_values($array);
+
+
+    file_put_contents($file, json_encode($array, JSON_PRETTY_PRINT));
+
+    
+    // $queryString = $_SERVER['QUERY_STRING'] && in_array($_SERVER['QUERY_STRING'], $categories) ? '?' . $_SERVER['QUERY_STRING'] : '';
+
+    // echo '<pre>';
+    // print_r($_SERVER);
+    // echo '</pre>';
+
+
+
+    header("Location: " . $_SERVER['PHP_SELF'] . $queryString);
+    exit();
+
+}
+
+
+if ($get['edit_id'] && !$get['delete_id'] && $_SERVER['PHP_SELF'] !== '/php-beginner/flashcard/edit.php') {  
+    $getIndex = $_GET['edit_id'];
+
+    header("Location: edit.php?edit_id=" . $getIndex);
+    exit();  
+}
+
+
+
 ?>

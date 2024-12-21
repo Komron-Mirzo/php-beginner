@@ -3,6 +3,7 @@
 require('globals.php');
 
 
+
 if($get['edit_id']) {
 
     $editIndex = $_GET['edit_id'];
@@ -31,7 +32,8 @@ if ($get['word-edit'] && $get['translation-edit'] && $get['category-edit'] && $g
 
     file_put_contents($file, json_encode($array, JSON_PRETTY_PRINT));
     
-    header("Location: flashcard.php");
+    header("Location: table.php"); 
+
     exit();
 }
 
@@ -53,8 +55,8 @@ if ($get['word-edit'] && $get['translation-edit'] && $get['category-edit'] && $g
 
     <form method="get" id="ka-flashcard-form-edit">
         <input type="hidden" name="edit_id-edit" value="<?php echo $editIndex ?>">
-        <input type="text" name="word-edit" id="ka-word-edit" placeholder="<?php echo $editArrayItem['word'] ?> ">
-        <input type="text" name="translation-edit" id="ka-translation-edit" placeholder="<?php echo $editArrayItem['translation'] ?>">
+        <input required type="text" name="word-edit" id="ka-word-edit" placeholder="<?php echo $editArrayItem['word'] ?> ">
+        <input required type="text" name="translation-edit" id="ka-translation-edit" placeholder="<?php echo $editArrayItem['translation'] ?>">
         <select name="category-edit" id="ka-category-edit">
 
             <?php
@@ -78,6 +80,11 @@ if ($get['word-edit'] && $get['translation-edit'] && $get['category-edit'] && $g
 
         <input type="submit" value="Save">
     </form>
+
+    <div class="ka-table-button">
+        <button onclick="window.history.back();">Go Back</button>
+    </div>
+
 
     
 </body>

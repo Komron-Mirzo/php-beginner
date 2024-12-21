@@ -140,3 +140,127 @@ button.edit {
 button.edit:hover {
     background-color: #388e3c;
 }
+
+.ka-table-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+    align-items: center;
+}
+
+.ka-table-button button {
+    height: 4rem;
+    width: 30rem;
+    margin-top: 3rem;
+}
+
+
+/* Flashcard Grid */
+.ka-flashcard-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+    background-color: #121212;
+}
+
+.ka-flashcard-item {
+    height: 18rem;
+    background-color: transparent;
+    border-radius: 1rem;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ka-flashcard-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+}
+
+.ka-flashcard-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.ka-flashcard-item:hover .ka-flashcard-inner {
+    transform: rotateY(180deg);
+}
+
+.ka-flashcard-word, .ka-flashcard-translation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    color: white;
+}
+
+.ka-flashcard-word {
+    background: #333;
+    color: #E0E0E0;
+    font-size: 1.2rem;
+}
+
+.ka-flashcard-translation {
+    background: linear-gradient(135deg, #31944f, #1b9b0a);
+    transform: rotateY(180deg);
+    color: #FFFFFF;
+}
+
+/* Grid Category Button */
+
+.ka-grid-category {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.ka-grid-category-item {
+    flex-basis: auto;
+    flex-grow: 1;
+    min-width: 10rem;
+}
+
+.ka-grid-radio {
+    display: none;
+}
+
+.ka-grid-label {
+    display: block;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #8b0000;
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.ka-grid-label:hover {
+    background-color: #027211; 
+    color: #ffffff;
+    box-shadow: 0 6px 8px rgba(0, 117, 35, 0.5);
+}
+
+.ka-grid-radio:checked + .ka-grid-label {
+    background-color: #027211;
+    color: #ffffff;
+    border-color: #027211; 
+    box-shadow: 0 6px 12px rgba(0, 255, 55, 0.4);
+}
+

@@ -1,42 +1,577 @@
 [
     {
-        "word": "Hi there",
+        "word": "Hello",
         "translation": "Salom",
         "category": "Greetings & Introductions"
     },
     {
-        "word": "bla bla",
-        "translation": "blaaa",
-        "category": "Common Verbs"
-    },
-    {
-        "word": "short",
-        "translation": "kalta",
-        "category": "Adjectives"
-    },
-    {
-        "word": "blue",
-        "translation": "ko'k",
-        "category": "Adjectives"
-    },
-    {
-        "word": "one",
-        "translation": "bir",
-        "category": "Numbers"
-    },
-    {
-        "word": "Hey",
-        "translation": "Hoy",
+        "word": "Goodbye",
+        "translation": "Xayr",
         "category": "Greetings & Introductions"
     },
     {
+        "word": "How are you?",
+        "translation": "Qalaysiz?",
+        "category": "Greetings & Introductions"
+    },
+    {
+        "word": "Nice to meet you",
+        "translation": "Siz bilan tanishganimdan xursandman",
+        "category": "Greetings & Introductions"
+    },
+    {
+        "word": "What is your name?",
+        "translation": "Ismingiz nima?",
+        "category": "Greetings & Introductions"
+    },
+    {
+        "word": "One",
+        "translation": "Bir",
+        "category": "Numbers"
+    },
+    {
+        "word": "Two",
+        "translation": "Ikki",
+        "category": "Numbers"
+    },
+    {
+        "word": "Three",
+        "translation": "Uch",
+        "category": "Numbers"
+    },
+    {
+        "word": "Four",
+        "translation": "To‘rt",
+        "category": "Numbers"
+    },
+    {
+        "word": "Five",
+        "translation": "Besh",
+        "category": "Numbers"
+    },
+    {
+        "word": "Red",
+        "translation": "Qizil",
+        "category": "Colors"
+    },
+    {
+        "word": "Blue",
+        "translation": "Ko‘k",
+        "category": "Colors"
+    },
+    {
+        "word": "Green",
+        "translation": "Yashil",
+        "category": "Colors"
+    },
+    {
+        "word": "Yellow",
+        "translation": "Sariq",
+        "category": "Colors"
+    },
+    {
+        "word": "Black",
+        "translation": "Qora",
+        "category": "Colors"
+    },
+    {
+        "word": "Monday",
+        "translation": "Dushanba",
+        "category": "Days of the Week"
+    },
+    {
+        "word": "Tuesday",
+        "translation": "Seshanba",
+        "category": "Days of the Week"
+    },
+    {
+        "word": "Wednesday",
+        "translation": "Chorshanba",
+        "category": "Days of the Week"
+    },
+    {
+        "word": "Thursday",
+        "translation": "Payshanba",
+        "category": "Days of the Week"
+    },
+    {
+        "word": "Friday",
+        "translation": "Juma",
+        "category": "Days of the Week"
+    },
+    {
+        "word": "January",
+        "translation": "Yanvar",
+        "category": "Months & Seasons"
+    },
+    {
+        "word": "February",
+        "translation": "Fevral",
+        "category": "Months & Seasons"
+    },
+    {
+        "word": "March",
+        "translation": "Mart",
+        "category": "Months & Seasons"
+    },
+    {
+        "word": "April",
+        "translation": "Aprel",
+        "category": "Months & Seasons"
+    },
+    {
+        "word": "May",
+        "translation": "May",
+        "category": "Months & Seasons"
+    },
+    {
+        "word": "Morning",
+        "translation": "Ertalab",
+        "category": "Time"
+    },
+    {
+        "word": "Afternoon",
+        "translation": "Tushdan keyin",
+        "category": "Time"
+    },
+    {
+        "word": "Evening",
+        "translation": "Kechqurun",
+        "category": "Time"
+    },
+    {
+        "word": "Night",
+        "translation": "Tun",
+        "category": "Time"
+    },
+    {
+        "word": "Midnight",
+        "translation": "Tungi yarim",
+        "category": "Time"
+    },
+    {
+        "word": "Mother",
+        "translation": "Ona",
+        "category": "Family"
+    },
+    {
+        "word": "Father",
+        "translation": "Ota",
+        "category": "Family"
+    },
+    {
+        "word": "Brother",
+        "translation": "Aka/Uka",
+        "category": "Family"
+    },
+    {
+        "word": "Sister",
+        "translation": "Opa/Singil",
+        "category": "Family"
+    },
+    {
+        "word": "Child",
+        "translation": "Bola",
+        "category": "Family"
+    },
+    {
+        "word": "Grandmother",
+        "translation": "Buvi",
+        "category": "Family"
+    },
+    {
+        "word": "Grandfather",
+        "translation": "Buva",
+        "category": "Family"
+    },
+    {
+        "word": "Uncle",
+        "translation": "Amaki/to‘ra",
+        "category": "Family"
+    },
+    {
+        "word": "Aunt",
+        "translation": "Xola/amaki",
+        "category": "Family"
+    },
+    {
+        "word": "Cousin",
+        "translation": "Amakivachcha/xolavachcha",
+        "category": "Family"
+    },
+    {
         "word": "Apple",
-        "translation": "olma",
+        "translation": "Olma",
+        "category": "Food & Drink"
+    },
+    {
+        "word": "Bread",
+        "translation": "Non",
+        "category": "Food & Drink"
+    },
+    {
+        "word": "Water",
+        "translation": "Suv",
+        "category": "Food & Drink"
+    },
+    {
+        "word": "Coffee",
+        "translation": "Kofe",
+        "category": "Food & Drink"
+    },
+    {
+        "word": "Tea",
+        "translation": "Choy",
+        "category": "Food & Drink"
+    },
+    {
+        "word": "Run",
+        "translation": "Yugurmoq",
         "category": "Common Verbs"
     },
     {
-        "word": "o'zgardi",
-        "translation": "o'zgardi",
-        "category": "Family"
+        "word": "Eat",
+        "translation": "Yemoq",
+        "category": "Common Verbs"
+    },
+    {
+        "word": "Sleep",
+        "translation": "Uxlash",
+        "category": "Common Verbs"
+    },
+    {
+        "word": "Go",
+        "translation": "Borish",
+        "category": "Common Verbs"
+    },
+    {
+        "word": "Speak",
+        "translation": "Gapirish",
+        "category": "Common Verbs"
+    },
+    {
+        "word": "Write",
+        "translation": "Yozmoq",
+        "category": "Common Verbs"
+    },
+    {
+        "word": "Read",
+        "translation": "O‘qimoq",
+        "category": "Common Verbs"
+    },
+    {
+        "word": "Sing",
+        "translation": "Qo‘shiq aytmoq",
+        "category": "Common Verbs"
+    },
+    {
+        "word": "Jump",
+        "translation": "Sakramoq",
+        "category": "Common Verbs"
+    },
+    {
+        "word": "Drive",
+        "translation": "Haydamoq",
+        "category": "Common Verbs"
+    },
+    {
+        "word": "Big",
+        "translation": "Katta",
+        "category": "Adjectives"
+    },
+    {
+        "word": "Small",
+        "translation": "Kichik",
+        "category": "Adjectives"
+    },
+    {
+        "word": "Fast",
+        "translation": "Tez",
+        "category": "Adjectives"
+    },
+    {
+        "word": "Slow",
+        "translation": "Sekin",
+        "category": "Adjectives"
+    },
+    {
+        "word": "Hot",
+        "translation": "Issiq",
+        "category": "Adjectives"
+    },
+    {
+        "word": "Cold",
+        "translation": "Sovuq",
+        "category": "Adjectives"
+    },
+    {
+        "word": "Beautiful",
+        "translation": "Chiroyli",
+        "category": "Adjectives"
+    },
+    {
+        "word": "Ugly",
+        "translation": "Xunuk",
+        "category": "Adjectives"
+    },
+    {
+        "word": "Happy",
+        "translation": "Baxtli",
+        "category": "Adjectives"
+    },
+    {
+        "word": "Sad",
+        "translation": "Xafa",
+        "category": "Adjectives"
+    },
+    {
+        "word": "Thank you",
+        "translation": "Rahmat",
+        "category": "Common Phrases"
+    },
+    {
+        "word": "You're welcome",
+        "translation": "Marhamat",
+        "category": "Common Phrases"
+    },
+    {
+        "word": "Excuse me",
+        "translation": "Kechirasiz",
+        "category": "Common Phrases"
+    },
+    {
+        "word": "Sorry",
+        "translation": "Uzr",
+        "category": "Common Phrases"
+    },
+    {
+        "word": "Good morning",
+        "translation": "Hayrli tong",
+        "category": "Common Phrases"
+    },
+    {
+        "word": "Good evening",
+        "translation": "Hayrli kech",
+        "category": "Common Phrases"
+    },
+    {
+        "word": "How are you?",
+        "translation": "Yaxshi misiz?",
+        "category": "Common Phrases"
+    },
+    {
+        "word": "What time is it?",
+        "translation": "Soat nechada?",
+        "category": "Common Phrases"
+    },
+    {
+        "word": "Where is the bathroom?",
+        "translation": "Hojiyning joyi qayerda?",
+        "category": "Common Phrases"
+    },
+    {
+        "word": "Please",
+        "translation": "Iltimos",
+        "category": "Common Phrases"
+    },
+    {
+        "word": "Sunny",
+        "translation": "Quyoshli",
+        "category": "Weather"
+    },
+    {
+        "word": "Rainy",
+        "translation": "Yomg‘irli",
+        "category": "Weather"
+    },
+    {
+        "word": "Cloudy",
+        "translation": "Bulutli",
+        "category": "Weather"
+    },
+    {
+        "word": "Windy",
+        "translation": "Shamolli",
+        "category": "Weather"
+    },
+    {
+        "word": "Stormy",
+        "translation": "Bo‘ronli",
+        "category": "Weather"
+    },
+    {
+        "word": "Snowy",
+        "translation": "Qorli",
+        "category": "Weather"
+    },
+    {
+        "word": "Cold",
+        "translation": "Sovuq",
+        "category": "Weather"
+    },
+    {
+        "word": "Hot",
+        "translation": "Issiq",
+        "category": "Weather"
+    },
+    {
+        "word": "Foggy",
+        "translation": "Tumanli",
+        "category": "Weather"
+    },
+    {
+        "word": "Humid",
+        "translation": "Nam",
+        "category": "Weather"
+    },
+    {
+        "word": "Park",
+        "translation": "Park",
+        "category": "Places"
+    },
+    {
+        "word": "School",
+        "translation": "Maktab",
+        "category": "Places"
+    },
+    {
+        "word": "Restaurant",
+        "translation": "Restoran",
+        "category": "Places"
+    },
+    {
+        "word": "Hospital",
+        "translation": "Kasalxona",
+        "category": "Places"
+    },
+    {
+        "word": "Supermarket",
+        "translation": "Supermarket",
+        "category": "Places"
+    },
+    {
+        "word": "Library",
+        "translation": "Kutubxona",
+        "category": "Places"
+    },
+    {
+        "word": "Shop",
+        "translation": "Do‘kon",
+        "category": "Places"
+    },
+    {
+        "word": "Bus station",
+        "translation": "Avtobus bekati",
+        "category": "Places"
+    },
+    {
+        "word": "Airport",
+        "translation": "Havo yo‘li",
+        "category": "Places"
+    },
+    {
+        "word": "Hotel",
+        "translation": "Mehmonxona",
+        "category": "Places"
+    },
+    {
+        "word": "Ticket",
+        "translation": "Chiptasi",
+        "category": "Travel Vocabulary"
+    },
+    {
+        "word": "Passport",
+        "translation": "Pasport",
+        "category": "Travel Vocabulary"
+    },
+    {
+        "word": "Luggage",
+        "translation": "Bagaj",
+        "category": "Travel Vocabulary"
+    },
+    {
+        "word": "Flight",
+        "translation": "Parvoz",
+        "category": "Travel Vocabulary"
+    },
+    {
+        "word": "Train",
+        "translation": "Poezd",
+        "category": "Travel Vocabulary"
+    },
+    {
+        "word": "Bus",
+        "translation": "Avtobus",
+        "category": "Travel Vocabulary"
+    },
+    {
+        "word": "Ticket counter",
+        "translation": "Chiptalar bo‘limi",
+        "category": "Travel Vocabulary"
+    },
+    {
+        "word": "Hotel room",
+        "translation": "Mehmonxona xonasi",
+        "category": "Travel Vocabulary"
+    },
+    {
+        "word": "Flight schedule",
+        "translation": "Parvoz jadvali",
+        "category": "Travel Vocabulary"
+    },
+    {
+        "word": "Tourist",
+        "translation": "Sayyoh",
+        "category": "Travel Vocabulary"
+    },
+    {
+        "word": "Price",
+        "translation": "Narx",
+        "category": "Shopping"
+    },
+    {
+        "word": "Discount",
+        "translation": "Chegirma",
+        "category": "Shopping"
+    },
+    {
+        "word": "Sale",
+        "translation": "Sotuv",
+        "category": "Shopping"
+    },
+    {
+        "word": "Cash",
+        "translation": "Naqd pul",
+        "category": "Shopping"
+    },
+    {
+        "word": "Credit card",
+        "translation": "Kredit karta",
+        "category": "Shopping"
+    },
+    {
+        "word": "Store",
+        "translation": "Do‘kon",
+        "category": "Shopping"
+    },
+    {
+        "word": "Receipt",
+        "translation": "Kvitansiya",
+        "category": "Shopping"
+    },
+    {
+        "word": "Bargain",
+        "translation": "Bargen",
+        "category": "Shopping"
+    },
+    {
+        "word": "Return",
+        "translation": "Qaytarish",
+        "category": "Shopping"
+    },
+    {
+        "word": "Product",
+        "translation": "Mahsulot",
+        "category": "Shopping"
     }
 ]

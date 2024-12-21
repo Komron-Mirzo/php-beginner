@@ -3,6 +3,12 @@
 
 require('logic.php');
 
+$lastWordsArray = array_reverse(array_slice($array, -6));
+
+// echo '<pre>';
+// print_r($lastWordsArray);
+// echo '</pre>';
+
 ?>
 
 
@@ -37,7 +43,7 @@ require('logic.php');
         <input type="submit" value="Add">
     </form>
 
-    <h2>Flashcards List</h2>
+    <h2>Recently added Flashcards</h2>
 
    
         <table border="1">
@@ -54,7 +60,7 @@ require('logic.php');
 
             
 
-            foreach ($array as $index => $item) {
+            foreach ($lastWordsArray as $index => $item) {
                 echo '<tr>';
                 echo '<td>' . $index + 1 . '</td>';
                 echo '<td>' . $item['word'] . '</td>';
@@ -69,18 +75,13 @@ require('logic.php');
 
         </table>
 
+    <div class="ka-table-button">
+        <button onclick="window.location.href='table.php';">Show All Table</button>
+        <button onclick="window.location.href='grid.php';">Show Flashcards Grid</button>
+    </div>
 
 
 
-    
-    <!-- 
-    1) Display All flashCards in separate php file with button it opens this page;
-    2) Add filter for flashcard by category;
-    3) For Add/Delete Table:
-        - Change the simple table into Form->table version;
-        - Add Edit inline rows functionality;
-        - Add Table filter by category;
-    -->
 
 
 </body>
