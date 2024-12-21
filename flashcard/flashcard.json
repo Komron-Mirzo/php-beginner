@@ -530,11 +530,6 @@
         "category": "Shopping"
     },
     {
-        "word": "Credit card",
-        "translation": "Kredit karta",
-        "category": "Shopping"
-    },
-    {
         "word": "Store",
         "translation": "Do\u2018kon",
         "category": "Shopping"
@@ -558,5 +553,10 @@
         "word": "Product",
         "translation": "Mahsulot",
         "category": "Shopping"
+    },
+    {
+        "word": "All good",
+        "translation": "Hammasi yaxshi",
+        "category": "Travel Vocabulary"
     }
 ]

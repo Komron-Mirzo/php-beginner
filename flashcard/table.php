@@ -13,12 +13,12 @@ $getSort = [
 // Simple if-else version of usort
 if($getSort['word_sort'] && $_GET['word_sort'] == 'asc'){
 
-    usort($array, function($a, $b) {
+    uasort($array, function($a, $b) {
         return strcasecmp($a['word'], $b['word']);
     });
 
 } else if ($getSort['word_sort'] && $_GET['word_sort'] == 'desc') {
-    usort($array, function($a, $b) {
+    uasort($array, function($a, $b) {
         return strcasecmp($b['word'], $a['word']);
     });
 }
@@ -29,7 +29,7 @@ if ($getSort['translation_sort']) {
 
     $translationSort = ($_GET['translation_sort'] == 'desc') ? -1 : 1;
 
-    usort($array, function ($a, $b) use ($translationSort){
+    uasort($array, function ($a, $b) use ($translationSort){
         return $translationSort * strcasecmp($a['translation'], $b['translation']);
     }); 
 

@@ -3,11 +3,9 @@
 
 require('logic.php');
 
-$lastWordsArray = array_reverse(array_slice($array, -6));
 
-// echo '<pre>';
-// print_r($lastWordsArray);
-// echo '</pre>';
+$lastWordsArray = array_slice($array, -6, null, true); 
+
 
 ?>
 
