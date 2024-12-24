@@ -1,102 +1,102 @@
 {
     "1": {
-        "title": "Basic PHP and SQL Project 1: Simple CRUD Application",
-        "task": "Create a simple CRUD application with PHP and MySQL, implementing basic database operations.",
-        "status": "true"
+        "title": "Task Manager (CRUD)",
+        "task": "PHP syntax, loops, forms, basic file handling, Estimated time: 6\u20138 hours, Deadline: 2024-12-29",
+        "status": true
     },
     "2": {
-        "title": "Basic PHP and SQL Project 2: User Registration and Login",
-        "task": "Implement a user registration and login system using PHP, MySQL, and form validation.",
-        "status": "false"
+        "title": "User Registration & Login",
+        "task": "Sessions, form validation, password hashing, Estimated time: 6\u20138 hours, Deadline: ",
+        "status": false
     },
     "3": {
-        "title": "PHP+SQL Project 1: To-Do List Application",
-        "task": "Build a to-do list app with PHP, MySQL for data storage, and basic front-end integration.",
-        "status": "false"
+        "title": "Flashcard App",
+        "task": "Arrays, loops, working with data files, Estimated time: 5\u20137 hours, Deadline: ",
+        "status": true
     },
     "4": {
-        "title": "PHP+SQL Project 2: Blog with Categories and Comments",
-        "task": "Create a blog with categories, posts, and comment functionality, using PHP and MySQL.",
-        "status": "false"
+        "title": "Contact Book (CRUD with MySQL)",
+        "task": "SQL basics, CRUD queries, PHP-MySQL integration, Estimated time: 8\u201310 hours, Deadline: 2025-01-08",
+        "status": false
     },
     "5": {
-        "title": "PHP+SQL Project 3: Inventory Management System",
-        "task": "Build an inventory management system with PHP, MySQL for database, and dynamic inventory updates.",
-        "status": "false"
+        "title": "Blog System (Articles + Comments)",
+        "task": "Table relationships, joins, pagination, MySQL error handling, Estimated time: 10\u201312 hours, Deadline: ",
+        "status": false
     },
     "6": {
-        "title": "PHP+SQL Project 4: Employee Management System",
-        "task": "Develop an employee management system, managing employee data, departments, and roles using PHP and MySQL.",
-        "status": "false"
+        "title": "Inventory Management System",
+        "task": "Advanced SQL queries, filtering, sorting, Estimated time: 12\u201314 hours, Deadline: ",
+        "status": false
     },
     "7": {
-        "title": "PHP+SQL Project 5: Simple E-Commerce Site",
-        "task": "Create a simple e-commerce website with PHP, MySQL, product listing, shopping cart, and order functionality.",
-        "status": "false"
+        "title": "MVC Blog App",
+        "task": "Basic MVC design, routing, controllers, views, Estimated time: 12\u201315 hours, Deadline: 2025-01-19",
+        "status": false
     },
     "8": {
-        "title": "PHP+SQL Project 6: Event Management System",
-        "task": "Build an event management system with event creation, ticket booking, and user management features.",
-        "status": "false"
+        "title": "MVC Authentication System",
+        "task": "MVC + session management, secure authentication, Estimated time: 12\u201315 hours, Deadline: ",
+        "status": false
     },
     "9": {
-        "title": "Advanced PHP+SQL Project 1: Multi-User Blog",
-        "task": "Develop a multi-user blog system where users can create accounts, post blogs, and comment on posts.",
-        "status": "false"
+        "title": "MVC To-Do List",
+        "task": "MVC + CRUD operations, structuring MVC applications, Estimated time: 12\u201315 hours, Deadline: ",
+        "status": false
     },
     "10": {
-        "title": "Advanced PHP+SQL Project 2: Job Portal",
-        "task": "Create a job portal where employers can post job openings and applicants can apply with their profiles.",
-        "status": "false"
+        "title": "E-commerce Platform (Products & Cart)",
+        "task": "SQL joins, subqueries, optimized queries, PHP session handling, Estimated time: 15\u201320 hours, Deadline: 2025-02-02",
+        "status": false
     },
     "11": {
-        "title": "Advanced PHP+SQL Project 3: Online Quiz System",
-        "task": "Develop an online quiz system where users can take quizzes, view results, and track their scores.",
-        "status": "false"
+        "title": "Search Engine",
+        "task": "Advanced SQL (LIKE, Full-Text Search), pagination, Estimated time: 12\u201315 hours, Deadline: ",
+        "status": false
     },
     "12": {
-        "title": "Laravel Project 1: Basic Blog with Authentication",
-        "task": "Create a simple blog application using Laravel with user authentication and basic post management.",
-        "status": "false"
+        "title": "Article Management System",
+        "task": "Many-to-many relationships, advanced SQL queries, MVC refinement, Estimated time: 12\u201315 hours, Deadline: ",
+        "status": false
     },
     "13": {
-        "title": "Laravel Project 2: Task Management Application",
-        "task": "Build a task management app using Laravel, allowing users to create, edit, and delete tasks.",
-        "status": "false"
+        "title": "Secure Auth System",
+        "task": "PHP security practices (password hashing, CSRF, XSS prevention), Estimated time: 12\u201315 hours, Deadline: 2025-02-15",
+        "status": false
     },
     "14": {
-        "title": "Laravel Project 3: E-commerce with Cart Functionality",
-        "task": "Develop an e-commerce site using Laravel with product listing, cart, and checkout functionality.",
-        "status": "false"
+        "title": "Blog with Admin Panel",
+        "task": "Role-based access, secure routing, Estimated time: 12\u201315 hours, Deadline: ",
+        "status": false
     },
     "15": {
-        "title": "Symfony Project 1: Basic CRUD Application",
-        "task": "Create a basic CRUD application using Symfony, with user-friendly interfaces and forms.",
-        "status": "false"
+        "title": "Secure E-commerce Payments",
+        "task": "Payment API integration, secure handling of sensitive data, Estimated time: 15\u201320 hours, Deadline: ",
+        "status": false
     },
     "16": {
-        "title": "Symfony Project 2: Blog with Categories and Comments",
-        "task": "Build a blog with Symfony, including categories, posts, and comment management.",
-        "status": "false"
+        "title": "API-Based Blog System",
+        "task": "RESTful APIs, API consumption, JSON handling, Estimated time: 10\u201312 hours, Deadline: 2025-03-01",
+        "status": false
     },
     "17": {
-        "title": "Symfony Project 3: Job Portal",
-        "task": "Develop a job portal with Symfony, allowing job listings and applicant profiles.",
-        "status": "false"
+        "title": "Weather App",
+        "task": "External API integration, parsing JSON, Estimated time: 8\u201310 hours, Deadline: ",
+        "status": false
     },
     "18": {
-        "title": "WordPress Custom Theme Development",
-        "task": "Build a custom WordPress theme, understanding the template hierarchy, functions, and customizations.",
-        "status": "false"
+        "title": "Finance Tracker",
+        "task": "Combining skills: authentication, data visualization, Estimated time: 15\u201320 hours, Deadline: ",
+        "status": false
     },
     "19": {
-        "title": "WordPress Plugin Development",
-        "task": "Create a custom WordPress plugin that adds specific functionality (e.g., a custom post type or widget).",
-        "status": "false"
+        "title": "Social Media Platform",
+        "task": "Full-stack development, user interaction, database optimization, Estimated time: 30\u201340 hours, Deadline: 2025-03-21",
+        "status": false
     },
     "20": {
-        "title": "WordPress Gutenberg Block Development",
-        "task": "Create custom blocks in the Gutenberg editor using JavaScript and PHP.",
-        "status": "false"
+        "title": "Learning Management System",
+        "task": "Complex application structure, user roles, progress tracking, Estimated time: 30\u201340 hours, Deadline: ",
+        "status": false
     }
 }

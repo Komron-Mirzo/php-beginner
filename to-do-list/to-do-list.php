@@ -60,10 +60,10 @@ if (isset($_GET['edit_id'])) {
 
     $editItem = $array[$currentIndex];
     
-    if ($editItem['status'] === "false") {
-        $editItem['status'] = "true";
+    if ($editItem['status'] === false) {
+        $editItem['status'] = true;
     } else {
-        $editItem['status'] = "false";
+        $editItem['status'] = false;
     }
 
     $array[$currentIndex] = $editItem;
@@ -139,7 +139,7 @@ if (isset($_GET['edit_id'])) {
                     $taskTitle = isset($task['title']) ? $task['title'] : '';
                     $taskItem = isset($task['title']) ? $task['task'] : '';
 
-                    if (isset($task['status']) && $task['status'] === 'true') {
+                    if (isset($task['status']) && $task['status'] === true) {
                         $taskEdit = '<a href="?edit_id=' .  $index  .  '">' . '<button>Finished</button>' .'</a>';
                     } else {
                         $taskEdit =  '<a href="?edit_id=' .  $index  .   '">' . '<button>Planned</button>' .'</a>';
