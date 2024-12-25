@@ -140,9 +140,9 @@ if (isset($_GET['edit_id'])) {
                     $taskItem = isset($task['title']) ? $task['task'] : '';
 
                     if (isset($task['status']) && $task['status'] === true) {
-                        $taskEdit = '<a href="?edit_id=' .  $index  .  '">' . '<button>Finished</button>' .'</a>';
+                        $taskEdit = '<a href="?edit_id=' .  $index  .  '">' . '<button class="finished">Finished</button>' .'</a>';
                     } else {
-                        $taskEdit =  '<a href="?edit_id=' .  $index  .   '">' . '<button>Planned</button>' .'</a>';
+                        $taskEdit =  '<a href="?edit_id=' .  $index  .   '">' . '<button class="planned">Planned</button>' .'</a>';
                     }
     
 
