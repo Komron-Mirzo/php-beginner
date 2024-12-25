@@ -7,7 +7,7 @@
     "2": {
         "title": "User Registration & Login",
         "task": "Sessions, form validation, password hashing, Estimated time: 6\u20138 hours, Deadline: ",
-        "status": false
+        "status": true
     },
     "3": {
         "title": "Flashcard App",
