@@ -1,0 +1,22 @@
+.ka-pages {
+    display: flex;
+    gap: 1rem;
+}
+
+
+/* Edit Page CSS */
+
+#edit-form {
+    display: flex;
+
+}
+
+.edit-field {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.ka-edit-header {
+    display: flex;
+    justify-content: space-between;
+}
