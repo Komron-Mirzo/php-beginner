@@ -1,22 +1,239 @@
-.ka-pages {
-    display: flex;
-    gap: 1rem;
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Layout */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #ddd;
+    line-height: 1.5;
+    padding: 20px;
+}
+
+h1 {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+/* Buttons */
+button, input[type="submit"], .edit_button {
+    background-color: #4ec53e;
+    border: none;
+    padding: 12px 25px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #0f5f27;
+}
+
+#delete_button {
+    background-color: #c53e3e;
+}
+
+#delete_button:hover {
+    background-color: #5c1d1d;
+}
+
+#add_button {
+    position: absolute;
+    right: 40px;
+    top: 40px;
 }
 
 
-/* Edit Page CSS */
-
-#edit-form {
-    display: flex;
-
+/* Container for Contacts and Forms */
+.ka-contacts-container, form {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.edit-field {
+.ka-contacts-container {
+    position: relative;
+}
+
+
+#edit-form, #add-contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2.5rem;
+}
+
+#edit-form input[type="submit"], #add-contact input[type="submit"] {
+    background-color: #0f5f27;
+}
+
+
+#edit-form input[type="submit"]:hover, #add-contact input[type="submit"]:hover {
+    background-color: #00b135;
+}
+
+.edit-field, .add-field {
+    flex-basis: calc(50% - 2rem);
     display: flex;
     flex-direction: column-reverse;
 }
 
+/* Input Fields */
+input[type="text"], input[type="email"], input[type="tel"], input[type="file"], input[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    background-color: #333;
+    border: 1px solid #444;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, input[type="file"]:focus {
+    border-color: #1f80e0;
+    outline: none;
+}
+
+label {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+input[type="checkbox"] {
+    position: relative;
+}
+
+/* Custom checkbox style */
+input[type="checkbox"]::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #222;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+input[type="checkbox"]:checked::before {
+    background-color: #4caf50;  
+    border-color: #4caf50;
+}
+
+input[type="checkbox"]:checked::after {
+    content: '\2714'; 
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    font-size: 14px;
+    color: white;
+}
+
+input[type="checkbox"]:hover::before {
+    border-color: #ddd;
+}
+
+
+/* Table Styling */
+.ka-contacts {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+}
+
+.ka-contacts th, .ka-contacts td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #444;
+}
+
+.ka-contacts th {
+    color: #fff;
+    background-color: #333;
+}
+
+.ka-contacts td {
+    color: #ccc;
+}
+
+.ka-contacts img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Pagination */
+.ka-pages {
+    margin-top: 20px;
+}
+
+.ka-pages a {
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 0 5px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.ka-pages a:hover {
+    background-color: #444;
+}
+
+.ka-pages a.active {
+    background-color: #1f80e0;
+}
+
+/* Edit Header */
 .ka-edit-header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.ka-edit-header h1 {
+    font-size: 1.8rem;
+}
+
+/* File Input for Image */
+#img {
+    background-color: #222;
+    border: 1px solid #444;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    .ka-contacts-container {
+        padding: 15px;
+    }
+
+    .ka-pages a {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
 }

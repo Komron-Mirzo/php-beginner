@@ -1,5 +1,7 @@
 <?php
 require('../config/connection.php');
+require('../logic/upload-file.php');
+
 
 $get = $_GET['id'] ?? '';
 $img_directory = 'uploads/';  
@@ -14,51 +16,21 @@ if ($get) {
 
 
 
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $img_name = $current_row['img'];
+    $img_name = $_POST['current_image'];
     
-    // Check if the image is uploaded.
-    if (isset($_FILES['img']) && $_FILES['img']['error'] === 0) {
-        $filepath = $_FILES['img']['tmp_name'];
-        $filename = $_FILES['img']['name'];
-        $fileSize = filesize($filepath);
-        $fileinfo = finfo_open(FILEINFO_MIME_TYPE);
-        $filetype = finfo_file($fileinfo, $filepath);
-
-        // Check if the file size and type are valid.
-        if ($fileSize === 0) {
-            die("The file is empty.");
+    if (isset($_FILES['img']) && $_FILES['img']['error'] !== UPLOAD_ERR_NO_FILE) {
+        $uploadDirectory = '/php-beginner/contact-book/uploads/';
+        $uploadResult = handleFileUpload($_FILES['img'], $uploadDirectory);
+    
+        if ($uploadResult['success']) {
+            $img_name = $uploadResult['filepath'];
+            echo $img_name;
+        } else {
+            die($uploadResult['message']);
         }
-
-        if ($fileSize > 3145728) {  // Max size 3 MB.
-            die("The file is too large.");
-        }
-
-        $allowedTypes = [
-            'image/png' => 'png',
-            'image/jpeg' => 'jpg'
-        ];
-
-        if (!in_array($filetype, array_keys($allowedTypes))) {
-            die("File not allowed.");
-        }
-
-        $extension = $allowedTypes[$filetype];
-        $targetDirectory = $_SERVER['DOCUMENT_ROOT'] . '/php-beginner/contact-book/' . $img_directory;  // Full local path.
-        $newFilepath = $targetDirectory . $filename;
-
-
-
-        // Move the uploaded file to the desired directory.
-        if (!move_uploaded_file($filepath, $newFilepath)) {
-            die("Can't move file.");
-        }
-
-
-        $img_name = "/php-beginner/contact-book/uploads/" . $filename; 
     }
-
+    
     // Update the database with new values.
     $sql = "UPDATE contacts 
             SET img = '{$img_name}', 
@@ -68,7 +40,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 phone = '{$_POST['phone']}', 
                 company = '{$_POST['company']}', 
                 language = '{$_POST['language']}' 
-            WHERE ID = {$_GET['id']}";
+            WHERE ID = {$_GET['id']}
+                AND (img != '{$img_name}' OR
+                first_name != '{$_POST['first_name']}' OR
+                last_name != '{$_POST['last_name']}' OR
+                email != '{$_POST['email']}' OR
+                phone != '{$_POST['phone']}' OR
+                company != '{$_POST['company']}' OR
+                language != '{$_POST['language']}');";
 
     $edit_row = mysqli_query($conn, $sql);
 
@@ -76,7 +55,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         header('Location:' . $_SERVER['PHP_SELF'] . '?id=' . $current_row['ID']);
     } else {
-        echo 'Edit failed: ' . mysqli_error($conn);
+
+        // header('Location:' . $_SERVER['PHP_SELF'] . '?id=' . $current_row['ID']);
+        echo 'Nothing changed or error: ' . mysqli_error($conn);
     }
 }
 ?>
@@ -97,8 +78,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 
     <form method="post" id="edit-form" enctype="multipart/form-data">
+        <input type="hidden" name="current_image" value=<?php echo $current_row['img'] ?>  />
         <div class="edit-field">
-            <input type="file" name="img" id="img">
+            <input type="file" name="img" id="img" >
             <label for="img"> <img src="<?php echo $current_row['img']; ?>" alt="Current Image" /> </label>
         </div>
         <div class="edit-field">

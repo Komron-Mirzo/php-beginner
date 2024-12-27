@@ -11,11 +11,13 @@ if(mysqli_num_rows($result_total)) {
 }
 
 //Pagination Logic
-$item_per_page = 10;
+$item_per_page = 5;
 $page = $_GET['page'] ?? 1;
 $offset = ($page - 1) * $item_per_page;
-$sql = 'SELECT * FROM contacts LIMIT ' . $item_per_page . ' OFFSET ' . $offset;
+$sql = 'SELECT * FROM contacts ORDER BY ID DESC' . ' LIMIT ' . $item_per_page . ' OFFSET ' . $offset;
 $result = mysqli_query($conn, $sql);
+
+
 
 
 
@@ -61,11 +63,13 @@ if($post['delete']) {
 
     <div class="ka-contacts-container">
 
-        <a href="logic/add.php"><button type="button">Add new</button> </a>
+        <a href="logic/add.php" id="add_button">
+            <button type="button">Add new</button>
+        </a>
 
 
         <form method="post">
-            <button type="submit">Delete</button>
+            <button type="submit" id="delete_button">Delete</button>
 
             <br>
 
@@ -92,7 +96,7 @@ if($post['delete']) {
                                 echo '<td>' . $row['phone'] . '</td>';
                                 echo '<td>' . $row['company'] . '</td>';
                                 echo '<td>' . $row['language'] . '</td>';
-                                echo '<td>' . '<a href=logic/edit.php?id='. $row['ID'] . '>' . 'Edit' . '</a>' .  '</td>';
+                                echo '<td>' . '<a class="edit_button" href=logic/edit.php?id='. $row['ID'] . '>' . 'Edit' . '</a>' .  '</td>';
                                 echo '</tr>';
                             }
                         }
@@ -105,7 +109,7 @@ if($post['delete']) {
 
             <?php 
 
-                for ($i=1; $i<= $result_total_fetch['total']/$item_per_page; $i++) {
+                for ($i=1; $i<= ceil($result_total_fetch['total']/$item_per_page); $i++) {
                     echo '<a href=?page=' . $i . '>' . $i . '</a>';
                 }
 

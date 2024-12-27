@@ -17,7 +17,7 @@
     "4": {
         "title": "Contact Book (CRUD with MySQL)",
         "task": "SQL basics, CRUD queries, PHP-MySQL integration, Estimated time: 8\u201310 hours, Deadline: 2025-01-08",
-        "status": false
+        "status": true
     },
     "5": {
         "title": "Blog System (Articles + Comments)",
