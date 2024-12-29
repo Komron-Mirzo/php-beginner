@@ -11,7 +11,7 @@ if(mysqli_num_rows($result_total)) {
 }
 
 //Pagination Logic
-$item_per_page = 5;
+$item_per_page = 6;
 $page = $_GET['page'] ?? 1;
 $offset = ($page - 1) * $item_per_page;
 $sql = 'SELECT * FROM contacts ORDER BY ID DESC' . ' LIMIT ' . $item_per_page . ' OFFSET ' . $offset;
