@@ -17,9 +17,9 @@ catch (PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
 }
 
-echo '<pre>';
-print_r($array);
-echo '</pre>';
+// echo '<pre>';
+// print_r($array);
+// echo '</pre>';
 
 
 ?>
