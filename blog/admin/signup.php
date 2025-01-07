@@ -2,11 +2,9 @@
 
 require('../config/constants.php');
 
-$dsn = 'mysql:host=' . DB_HOST . '; dbname=' . DB_NAME;
 
-try {
 
-    $conn = new PDO( $dsn, DB_USER, DB_PASS);
+try {   
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {

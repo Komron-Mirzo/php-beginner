@@ -3,6 +3,54 @@
 require('../config/constants.php');
 
 
+echo '<pre>';
+print_r($_SERVER);
+echo '</pre>';
+
+
+echo '<pre>';
+        print_r($_FILES);
+        echo '</pre>';
+
+
+try {
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+        $post_title = sanitize_string($_POST['add_post_title'] ?? '');
+        if (empty($post_title)) {
+            echo 'Post title cannot be an empty';
+        }
+
+        $post_content = sanitize_ckeditor_content($_POST['add_post_content'] ?? '');
+        if (empty($post_content)) {
+            echo 'Post content cannot be an empty';
+        }
+
+       
+
+        if (isset($_FILES['add_post_img']) && $_FILES['add_post_img']['error'] === UPLOAD_ERR_OK) {
+        $post_img = custom_upload_image($_FILES['add_post_img']);
+        }
+
+        // Prepared statements for adding a post
+
+        $stmt= $conn->prepare('INSERT INTO posts (post_title, post_img, post_content)
+                                VALUES (?, ?, ?)');
+        $success = $stmt->execute([$post_title, $post_img, $post_content]);
+
+        if ($success) {
+            echo 'Post is saved successfuilly';
+        }
+
+
+
+    }
+}
+catch (PDOException $error) {
+    echo 'Connection failed'. $error;
+}
 
 
 ?>
@@ -13,15 +61,7 @@ require('../config/constants.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
-    <script>
-    tinymce.init({
-        selector: '#add_post_content', // Target the textarea by its ID or class
-        plugins: 'advlist autolink link image lists charmap print preview',
-        toolbar: 'undo redo | styles | bold italic | alignleft aligncenter alignright alignjustify | outdent indent',
-        menubar: false // Disable the top menu if not needed
-    });
-</script>
+    <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
 
     <title>Add New Post</title>
 </head>
@@ -29,18 +69,22 @@ require('../config/constants.php');
 
     <h1>Add a new post</h1>
 
-    <form action="" method="post">
+    <form action="" method="post"  enctype="multipart/form-data">
         <div class="add-post-field">
-            <input type="text" name="add_post_title" id="add_post_title">
+            <input type="text" name="add_post_title" id="add_post_title" required>
             <label for="add_post_title">Post title</label>
         </div>
         <div class="add-post-field">
-            <input type="text" name="add_post_content" id="add_post_content">
-            <label for="add_post_content">Post Content</label>
+            <input type="file" name="add_post_img" id="add_post_img" required>
+            <label for="add_post_img">Add Post Image</label>
         </div>
+        <textarea name="add_post_content" id="add_post_content" required></textarea>
+        <input type="submit" value="Add Post">
+
     </form>
+    <script>
+        CKEDITOR.replace('add_post_content');
+    </script>
     
 </body>
 </html>
-
-<!-- post_title	post_content	post_date	post_img -->
