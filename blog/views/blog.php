@@ -1,11 +1,11 @@
 <?php
 
 require('../config/constants.php');
+include('../views/menu.php');
 
 
 
 try {
-    $conn = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME,  DB_USER, DB_PASS);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $stmt = $conn->prepare("SELECT * FROM posts");
@@ -30,6 +30,7 @@ catch (PDOException $e) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../blog.css">
     <title>Blog Grid</title>
 </head>
 <body>
