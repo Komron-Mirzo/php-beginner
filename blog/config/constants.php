@@ -16,19 +16,25 @@ function sanitize_string($input) {
     return $input;
 }
 
-//Custom sanitize Pot Editor
+
+
 function sanitize_ckeditor_content($input) {
     // Define allowed tags
-    $allowed_tags = '<p><a><strong><em><u><ul><ol><li>';
+    $allowed_tags = '<p><a><strong><em><u><ul><ol><li><br><h1><h2><h3><h4><h5><h6>';
 
-    // Remove unwanted tags and keep allowed ones
+    // Remove unwanted tags but keep allowed ones
     $input = strip_tags($input, $allowed_tags);
 
-    // Escape any remaining special characters
-    $input = htmlspecialchars($input, ENT_QUOTES, 'UTF-8');
+    // Decode any existing HTML entities (to prevent double escaping)
+    $input = htmlspecialchars_decode($input, ENT_QUOTES);
+
+    // Re-escape only necessary characters for safety
+    $input = htmlentities($input, ENT_NOQUOTES, 'UTF-8');
 
     return $input;
 }
+
+
 
 
 // Custom Upload File function
@@ -74,10 +80,6 @@ function custom_upload_image($file) {
         return "Sorry, there was an error uploading your file.";
     }
 }
-
-
-
-
 
 
 

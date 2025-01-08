@@ -1,8 +1,6 @@
 <?php
 
 require('../config/constants.php');
-include('../views/menu.php');
-
 
 
 try {   

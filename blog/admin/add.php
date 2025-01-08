@@ -8,6 +8,7 @@ include('../views/menu.php');
 try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+    // Adding a new Post Logic
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $post_title = sanitize_string($_POST['add_post_title'] ?? '');
@@ -26,8 +27,6 @@ try {
 
         $date = date('Y:m:d');
 
-        // Prepared statements for adding a post
-
         $stmt= $conn->prepare('INSERT INTO posts (post_title, post_img, post_content, post_date, author_id)
                                 VALUES (?, ?, ?, ?, ?)');
         $success = $stmt->execute([$post_title, $post_img, $post_content, $date, $_SESSION['author_id']]);
@@ -38,6 +37,22 @@ try {
 
 
 
+    }
+
+    //Author posts display Logic
+    $stmt_author_posts = $conn->prepare('SELECT * FROM posts WHERE author_id = ?');
+    $stmt_author_posts->execute([$_SESSION['author_id']]);
+    $author_posts = $stmt_author_posts->fetchAll(PDO::FETCH_ASSOC);
+
+    //Referring to Edit Post Page
+
+    $edit_id = $_GET['edit_id'] ?? '';
+    $delete_id = $_GET['delete_id'] ?? '';
+
+    if (!empty($edit_id)) {
+        header('Location:' . '../admin/edit.php' . '?edit_id=' . $_GET['edit_id']);
+    } else if (!empty($delete_id)) {
+        header('Location:' . '../admin/delete.php' . '?delete_id=' . $_GET['delete_id']);
     }
 }
 catch (PDOException $error) {
@@ -62,6 +77,30 @@ catch (PDOException $error) {
     <div class="main-content-add">
         <div class="author-container">
             <?php echo '<h3>Welcome, ' . $_SESSION['author_name'] . '</h3>'  ?>
+            <div class="author-posts">
+                <h3>Your Posts</h3>
+                <div class="author-inner-posts">
+                    
+                    <?php
+                        foreach($author_posts as $post) {
+                            echo '<div class="author-post-item">';
+                            echo '<img height="80" width="80" src="' . $post['post_img'] . '"/>';
+                            echo '<div class="author-right">';
+                            echo '<h5>' . $post['post_title'] . '</h5>';
+                            echo '<div class="author-post-date"> Posted: ' . $post['post_date'] . '</div>';
+                            echo '</div>';
+                            echo '</div>';
+                            echo '<span>';
+                            echo '<a href=?edit_id=' . $post['post_id'] . '>' . 'Edit Post' . '</a>'; 
+                            echo '<a class="delete-post" href=?delete_id=' . $post['post_id'] . '>' . 'Delete Post' . '</a>'; 
+                            echo '</span>';
+
+                        }
+                    ?>
+                    
+                   
+                </div>
+            </div>
         </div>
         <div class="add-container">
             <h1>Add a new post</h1>

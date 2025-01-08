@@ -73,6 +73,9 @@ form {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 input[type="text"],
@@ -89,7 +92,7 @@ textarea {
     color: #fff;
 }
 
-input[type="submit"] {
+input[type="submit"], button {
     background-color: #007BFF;
     color: #fff;
     border: none;
@@ -97,6 +100,12 @@ input[type="submit"] {
     cursor: pointer;
     border-radius: 5px;
     font-size: 1.1em;
+    margin-top: 1.5rem;
+    width: 20rem;
+}
+
+button {
+    width: 100%;
 }
 
 input[type="submit"]:hover {
@@ -193,6 +202,57 @@ nav ul li a:hover {
 nav ul li a.active {
     color: #ff6f61;  /* Highlight active menu item */
     font-weight: bold;
+}
+
+.add-post-field, .edit-post-field {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+
+.author-inner-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.author-inner-posts > span {
+    display: flex;
+    justify-content: space-between;
+}
+
+.author-inner-posts a {
+    color: yellow;
+}
+
+.author-inner-posts .delete-post {
+    color: rgb(255, 0, 234);
+}
+
+.author-post-item {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.author-post-date {
+    font-size: 12px;
+}
+
+.author-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.single-post {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;;
+}
+
+.single-button button {
+    width: 15rem;
+    max-width: 15rem;
 }
 
 /* Responsive Design */

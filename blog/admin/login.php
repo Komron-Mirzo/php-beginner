@@ -2,7 +2,6 @@
 
 require('../config/constants.php');
 include_once('../config/session_start.php');
-include('../views/menu.php');
 
 try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

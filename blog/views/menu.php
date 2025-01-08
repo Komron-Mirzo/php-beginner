@@ -1,9 +1,8 @@
 <!-- menu.php -->
 <nav>
     <ul>
-        <li><a href="../views/blog.php">Blog</a></li>
-        <li><a href="../admin/add.php">Add Post</a></li>
-        <li><a href="../admin/login.php">Login</a></li>
-        <li><a href="../admin/signup.php">Signup</a></li>
+        <li><a href="../views/blog.php">Blog Page</a></li>
+        <li><a href="../admin/add.php">Admin Page</a></li>
+        <li><a href="?logout=true">Logout</a></li>
     </ul>
 </nav>

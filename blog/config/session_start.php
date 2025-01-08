@@ -11,4 +11,31 @@ session_start([
 if (session_id() === '') {
     session_regenerate_id(true);
 }
+
+// If a user is logging out, destroy the session
+if (isset($_GET['logout']) && $_GET['logout'] === 'true') {
+    // Clear all session variables
+    session_unset();
+
+    // Destroy the session
+    session_destroy();
+
+    // Optionally, unset the session cookie
+    if (ini_get("session.use_cookies")) {
+        $params = session_get_cookie_params();
+        setcookie(
+            session_name(),
+            '',
+            time() - 3600,
+            $params["path"],
+            $params["domain"],
+            $params["secure"],
+            $params["httponly"]
+        );
+    }
+
+    // Redirect to the login page or another page
+    header("Location: login.php");
+    exit;
+}
 ?>
