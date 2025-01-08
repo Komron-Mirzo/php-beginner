@@ -24,11 +24,13 @@ try {
         $post_img = custom_upload_image($_FILES['add_post_img']);
         }
 
+        $date = date('Y:m:d');
+
         // Prepared statements for adding a post
 
-        $stmt= $conn->prepare('INSERT INTO posts (post_title, post_img, post_content, author_id)
-                                VALUES (?, ?, ?, ?)');
-        $success = $stmt->execute([$post_title, $post_img, $post_content, $_SESSION['author_id']]);
+        $stmt= $conn->prepare('INSERT INTO posts (post_title, post_img, post_content, post_date, author_id)
+                                VALUES (?, ?, ?, ?, ?)');
+        $success = $stmt->execute([$post_title, $post_img, $post_content, $date, $_SESSION['author_id']]);
 
         if ($success) {
             echo 'Post is saved successfuilly';

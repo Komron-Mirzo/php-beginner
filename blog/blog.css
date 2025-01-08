@@ -50,8 +50,9 @@ h1, h2, h3 {
 
 .ka-blog-img img {
     width: 100%;
-    height: auto;
+    height: 15rem;
     border-radius: 8px;
+    object-fit: cover;
 }
 
 .ka-blog-title {

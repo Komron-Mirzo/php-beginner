@@ -2,6 +2,7 @@
 
 require('../config/constants.php');
 include('../views/menu.php');
+include_once('../config/session_start.php');
 
 
 
@@ -42,11 +43,11 @@ catch (PDOException $e) {
         <?php
             foreach($array as $item) {
                 echo '<div class="ka-blog-item">';
-                echo '<div class="ka-blog-img"';
+                echo '<div class="ka-blog-img">';
                 echo '<img src="' . $item['post_img'] . '"/>';
-                echo '<div class="ka-blog-title"';
+                echo '<div class="ka-blog-title">';
                 echo '<h2>' . $item['post_title'] . '</h2>';
-                echo '<span class="ka-blog-author"> By ' . $item['post_date'];
+                echo '<span class="ka-blog-author"> By ' . $_SESSION['author_name'] . ' Date: ' .  $item['post_date'];
                 echo '</div>';
                 echo '</div>';
                 echo '</div>';
