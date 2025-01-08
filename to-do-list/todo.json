@@ -22,7 +22,7 @@
     "5": {
         "title": "Blog System (Articles + Comments)",
         "task": "Table relationships, joins, pagination, MySQL error handling, Estimated time: 10\u201312 hours, Deadline: ",
-        "status": false
+        "status": true
     },
     "6": {
         "title": "Inventory Management System",
