@@ -13,7 +13,10 @@ if (!empty($get)) {
 try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $stmt = $conn->prepare("SELECT * FROM posts");
+    //Getting all blog posts
+    $stmt = $conn->prepare("SELECT posts.post_id, posts.post_title, posts.post_content, posts.post_date, posts.post_img, author.author_name
+                            FROM posts
+                            INNER JOIN author ON posts.author_id = author.author_id;");
     $stmt->execute();
     $array = $stmt->fetchAll(PDO::FETCH_ASSOC);
    
@@ -46,7 +49,7 @@ catch (PDOException $e) {
                 echo '<img src="' . $item['post_img'] . '"/>';
                 echo '<div class="ka-blog-title">';
                 echo '<h2>' . $item['post_title'] . '</h2>';
-                echo '<span class="ka-blog-author"> By ' . $_SESSION['author_name'] . ' Date: ' .  $item['post_date'];
+                echo '<span class="ka-blog-author"> By ' . $item['author_name'] . ' Date: ' .  $item['post_date'];
                 echo '</div>';
                 echo '</div>';
                 echo '</a>';
