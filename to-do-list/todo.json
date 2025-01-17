@@ -1,102 +1,62 @@
 {
     "1": {
         "title": "Task Manager (CRUD)",
-        "task": "PHP syntax, loops, forms, basic file handling, Estimated time: 6\u20138 hours, Deadline: 2024-12-29",
+        "task": "PHP syntax, loops, forms, basic file handling, Estimated time: 6–8 hours, Deadline: 2024-12-29",
         "status": true
     },
     "2": {
         "title": "User Registration & Login",
-        "task": "Sessions, form validation, password hashing, Estimated time: 6\u20138 hours, Deadline: ",
+        "task": "Sessions, form validation, password hashing, Estimated time: 6–8 hours, Deadline: ",
         "status": true
     },
     "3": {
         "title": "Flashcard App",
-        "task": "Arrays, loops, working with data files, Estimated time: 5\u20137 hours, Deadline: ",
+        "task": "Arrays, loops, working with data files, Estimated time: 5–7 hours, Deadline: ",
         "status": true
     },
     "4": {
         "title": "Contact Book (CRUD with MySQL)",
-        "task": "SQL basics, CRUD queries, PHP-MySQL integration, Estimated time: 8\u201310 hours, Deadline: 2025-01-08",
+        "task": "SQL basics, CRUD queries, PHP-MySQL integration, Estimated time: 8–10 hours, Deadline: 2025-01-08",
         "status": true
     },
     "5": {
         "title": "Blog System (Articles + Comments)",
-        "task": "Table relationships, joins, pagination, MySQL error handling, Estimated time: 10\u201312 hours, Deadline: ",
+        "task": "Table relationships, joins, pagination, MySQL error handling, Estimated time: 10–12 hours, Deadline: ",
         "status": true
     },
     "6": {
-        "title": "Inventory Management System",
-        "task": "Advanced SQL queries, filtering, sorting, Estimated time: 12\u201314 hours, Deadline: ",
-        "status": false
+        "title": "Inventory Management System (without Composer)",
+        "task": "Advanced SQL queries, filtering, sorting, Estimated time: 12–14 hours, Deadline: ",
+        "status": true
     },
     "7": {
-        "title": "MVC Blog App",
-        "task": "Basic MVC design, routing, controllers, views, Estimated time: 12\u201315 hours, Deadline: 2025-01-19",
+        "title": "Weather Dashboard (Basic MVC + External API Integration + Composer + Bootstrap)",
+        "task": "Basic MVC structure with Composer, integrating external APIs (e.g., OpenWeatherMap) for fetching weather data. Use RESTful `GET` requests to display current weather and forecasts. Data visualization with charts or tables. Recommended to use Bootstrap for fast layout and styling. Estimated time: 12–15 hours. Deadline: 2025-01-30.",
         "status": false
     },
     "8": {
-        "title": "MVC Authentication System",
-        "task": "MVC + session management, secure authentication, Estimated time: 12\u201315 hours, Deadline: ",
+        "title": "Mini Social Network (Basic MVC without Composer + Bootstrap)",
+        "task": "Basic MVC structure focusing on database-driven CRUD operations for user posts, comments, and likes. Work directly with MySQL for database interactions, without implementing internal APIs. Use Bootstrap for a clean, responsive front-end. Estimated time: 12–15 hours. Deadline: 2025-01-25.",
         "status": false
     },
     "9": {
-        "title": "MVC To-Do List",
-        "task": "MVC + CRUD operations, structuring MVC applications, Estimated time: 12\u201315 hours, Deadline: ",
+        "title": "Event Management System (Intermediate MVC without Composer + Tailwind CSS)",
+        "task": "Intermediate MVC project with MySQL database management for creating, updating, and managing events and user registrations. Implement event filtering and searching through direct SQL queries in the model layer, without internal APIs. Recommended to use Tailwind CSS for flexible, custom designs and layouts. Estimated time: 15–20 hours. Deadline: 2025-02-05.",
         "status": false
     },
     "10": {
-        "title": "E-commerce Platform (Products & Cart)",
-        "task": "SQL joins, subqueries, optimized queries, PHP session handling, Estimated time: 15\u201320 hours, Deadline: 2025-02-02",
+        "title": "Task Management System (Intermediate MVC + RESTful API + Composer + Tailwind CSS)",
+        "task": "Intermediate MVC project using Composer to manage dependencies. Build a RESTful API for task creation, updating, and completion. Integrate external APIs (e.g., a calendar API like Google Calendar) for syncing deadlines. Use Tailwind CSS for responsive, modular front-end design. Estimated time: 15–20 hours. Deadline: 2025-02-10.",
         "status": false
     },
     "11": {
-        "title": "Search Engine",
-        "task": "Advanced SQL (LIKE, Full-Text Search), pagination, Estimated time: 12\u201315 hours, Deadline: ",
+        "title": "Online Marketplace (Advanced MVC with Composer + Bootstrap)",
+        "task": "Advanced MVC project with internal RESTful APIs for product listings, user management, and order processing. Integrate external APIs for payment gateways (e.g., Stripe, PayPal) and shipping services (e.g., FedEx API). Use Bootstrap for fast front-end layout and component styling. Estimated time: 20–30 hours. Deadline: 2025-03-01.",
         "status": false
     },
     "12": {
-        "title": "Article Management System",
-        "task": "Many-to-many relationships, advanced SQL queries, MVC refinement, Estimated time: 12\u201315 hours, Deadline: ",
-        "status": false
-    },
-    "13": {
-        "title": "Secure Auth System",
-        "task": "PHP security practices (password hashing, CSRF, XSS prevention), Estimated time: 12\u201315 hours, Deadline: 2025-02-15",
-        "status": false
-    },
-    "14": {
-        "title": "Blog with Admin Panel",
-        "task": "Role-based access, secure routing, Estimated time: 12\u201315 hours, Deadline: ",
-        "status": false
-    },
-    "15": {
-        "title": "Secure E-commerce Payments",
-        "task": "Payment API integration, secure handling of sensitive data, Estimated time: 15\u201320 hours, Deadline: ",
-        "status": false
-    },
-    "16": {
-        "title": "API-Based Blog System",
-        "task": "RESTful APIs, API consumption, JSON handling, Estimated time: 10\u201312 hours, Deadline: 2025-03-01",
-        "status": false
-    },
-    "17": {
-        "title": "Weather App",
-        "task": "External API integration, parsing JSON, Estimated time: 8\u201310 hours, Deadline: ",
-        "status": false
-    },
-    "18": {
-        "title": "Finance Tracker",
-        "task": "Combining skills: authentication, data visualization, Estimated time: 15\u201320 hours, Deadline: ",
-        "status": false
-    },
-    "19": {
-        "title": "Social Media Platform",
-        "task": "Full-stack development, user interaction, database optimization, Estimated time: 30\u201340 hours, Deadline: 2025-03-21",
-        "status": false
-    },
-    "20": {
-        "title": "Learning Management System",
-        "task": "Complex application structure, user roles, progress tracking, Estimated time: 30\u201340 hours, Deadline: ",
+        "title": "Online Payment System with Analytics (Advanced MVC + Payment Integration + API + Composer + Tailwind CSS)",
+        "task": "Advanced MVC project using Composer for dependency management. Build internal RESTful APIs for transaction management and analytics. Integrate external payment APIs (e.g., Stripe, PayPal) for processing payments. Use APIs for analytics visualization (e.g., Chart.js or external analytics services). Use Tailwind CSS for fine control over design and custom styling. Estimated time: 25–35 hours. Deadline: 2025-03-01.",
         "status": false
     }
 }

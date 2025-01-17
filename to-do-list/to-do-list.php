@@ -148,7 +148,7 @@ if (isset($_GET['edit_id'])) {
 
                 }
                 
-                echo '<td>' . $index + 1 . '</td>';
+                echo '<td>' . $index . '</td>';
                 echo '<td>' . $task['title'] .'</td>';
                 echo '<td>' . $task['task'] . '</td>';
 
